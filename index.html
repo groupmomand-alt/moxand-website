@@ -341,6 +341,9 @@ label{margin-bottom:4px;font-size:12px}
 @media(max-width:900px){.more-svc{grid-template-columns:1fr}}
 
 .areas-wrap{position:relative}
+.area-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.area-chips a{display:inline-block;padding:9px 16px;border:1px solid #cfd8d2;border-radius:999px;background:#F2F4EF;color:#12372A;font-weight:600;font-size:15px;text-decoration:none}
+.area-chips a:hover{border-color:#B08D57;color:#B08D57}
 .swipe-hint{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-top:8px;font-family:BSC;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:13px;color:#8a6a35}
 .swipe-hint svg{animation:nudge 1.4s ease-in-out infinite}
 @keyframes nudge{50%{transform:translateX(6px)}}
@@ -427,14 +430,13 @@ label{margin-bottom:4px;font-size:12px}
   <div class="wrap">
     <h2>Areas we serve</h2>
     <p class="section-intro">Security guards and event security across Virginia.</p>
-    <div class="areas-wrap"><div class="grid3 areas swipe" id="areaStrip">
-      <article class="card"><img class="media " src="https://images.unsplash.com/photo-1654803291865-a92b7b496bb3?auto=format&fit=crop&w=800&q=70" srcset="https://images.unsplash.com/photo-1654803291865-a92b7b496bb3?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1654803291865-a92b7b496bb3?auto=format&fit=crop&w=600&q=70 600w, https://images.unsplash.com/photo-1654803291865-a92b7b496bb3?auto=format&fit=crop&w=800&q=70 800w" sizes="(max-width: 900px) 46vw, 230px" alt="Northern Virginia" loading="lazy" decoding="async"><div class="card-body"><h3>Northern Virginia</h3><p>Fairfax, Arlington, Alexandria, Loudoun, and Prince William. <a class="more" href="security-guards-northern-virginia.html">See Northern Virginia</a></p></div></article>
-      <article class="card"><img class="media " src="https://images.unsplash.com/photo-1695609768244-399cface4b17?auto=format&fit=crop&w=800&q=70" srcset="https://images.unsplash.com/photo-1695609768244-399cface4b17?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1695609768244-399cface4b17?auto=format&fit=crop&w=600&q=70 600w, https://images.unsplash.com/photo-1695609768244-399cface4b17?auto=format&fit=crop&w=800&q=70 800w" sizes="(max-width: 900px) 46vw, 230px" alt="Virginia Beach" loading="lazy" decoding="async"><div class="card-body"><h3>Virginia Beach</h3><p>Virginia Beach, Norfolk, Chesapeake, and Hampton Roads. <a class="more" href="security-guards-virginia-beach.html">See Virginia Beach</a></p></div></article>
-      <article class="card"><img class="media " src="https://images.unsplash.com/photo-1780496603748-d4153c8b58b0?auto=format&fit=crop&w=800&q=70" srcset="https://images.unsplash.com/photo-1780496603748-d4153c8b58b0?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1780496603748-d4153c8b58b0?auto=format&fit=crop&w=600&q=70 600w, https://images.unsplash.com/photo-1780496603748-d4153c8b58b0?auto=format&fit=crop&w=800&q=70 800w" sizes="(max-width: 900px) 46vw, 230px" alt="Shenandoah Valley" loading="lazy" decoding="async"><div class="card-body"><h3>Shenandoah Valley</h3><p>Winchester, Harrisonburg, Staunton, and the valley. <a class="more" href="security-guards-shenandoah-valley.html">See Shenandoah Valley</a></p></div></article>
-      <article class="card"><img class="media " src="https://images.unsplash.com/photo-1583586604855-62f0cec351d9?auto=format&fit=crop&w=800&q=70" srcset="https://images.unsplash.com/photo-1583586604855-62f0cec351d9?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1583586604855-62f0cec351d9?auto=format&fit=crop&w=600&q=70 600w, https://images.unsplash.com/photo-1583586604855-62f0cec351d9?auto=format&fit=crop&w=800&q=70 800w" sizes="(max-width: 900px) 46vw, 230px" alt="Richmond" loading="lazy" decoding="async"><div class="card-body"><h3>Richmond</h3><p>Richmond, Henrico, Chesterfield, and Petersburg. <a class="more" href="security-guards-richmond.html">See Richmond</a></p></div></article>
-      <article class="card"><img class="media " src="https://images.unsplash.com/photo-1704291636047-0991d88be93b?auto=format&fit=crop&w=800&q=70" srcset="https://images.unsplash.com/photo-1704291636047-0991d88be93b?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1704291636047-0991d88be93b?auto=format&fit=crop&w=600&q=70 600w, https://images.unsplash.com/photo-1704291636047-0991d88be93b?auto=format&fit=crop&w=800&q=70 800w" sizes="(max-width: 900px) 46vw, 230px" alt="Fredericksburg" loading="lazy" decoding="async"><div class="card-body"><h3>Fredericksburg</h3><p>Fredericksburg, Stafford, and Spotsylvania. <a class="more" href="security-guards-fredericksburg.html">See Fredericksburg</a></p></div></article>
+    <div class="area-chips">
+      <a href="security-guards-northern-virginia.html">Northern Virginia</a>
+      <a href="security-guards-virginia-beach.html">Virginia Beach</a>
+      <a href="security-guards-shenandoah-valley.html">Shenandoah Valley</a>
+      <a href="security-guards-richmond.html">Richmond</a>
+      <a href="security-guards-fredericksburg.html">Fredericksburg</a>
     </div>
-    <div class="swipe-hint" aria-hidden="true">Swipe <svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
   </div>
 </section>
 
@@ -513,24 +515,6 @@ label{margin-bottom:4px;font-size:12px}
     <div class="btn-row"><a class="btn small" href="careers.html">View Open Jobs &amp; Apply</a></div>
   </div>
 </section>
-<script>
-(function(){
-  var st=document.getElementById('areaStrip'); if(!st) return;
-  var pos=0, dir=1, wait=0;
-  function step(){
-    if(document.hidden) return;
-    var max=st.scrollWidth-st.clientWidth;
-    if(max<=0) return;
-    if(wait>0){ wait--; return; }
-    pos+=dir*0.5;
-    if(pos>=max){ pos=max; dir=-1; wait=50; }
-    if(pos<=0){ pos=0; dir=1; wait=50; }
-    st.scrollLeft=pos;
-  }
-  setInterval(step,40);
-  st.addEventListener('scroll',function(){ pos=st.scrollLeft; },{passive:true});
-})();
-</script>
 </main>
 <footer class="site">
   <div class="footer-grid">
