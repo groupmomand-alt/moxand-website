@@ -516,18 +516,17 @@ label{margin-bottom:4px;font-size:12px}
 <script>
 (function(){
   var st=document.getElementById('areaStrip'); if(!st) return;
-  var paused=false, dir=1;
-  function tick(){
-    if(paused) return;
+  var dir=1, pos=0;
+  function step(){
     var max=st.scrollWidth-st.clientWidth;
     if(max<=0) return;
-    st.scrollLeft+=dir*0.6;
-    if(st.scrollLeft>=max-1) dir=-1;
-    if(st.scrollLeft<=0) dir=1;
+    pos+=dir;
+    if(pos>=max){pos=max;dir=-1;}
+    if(pos<=0){pos=0;dir=1;}
+    st.scrollLeft=pos;
   }
-  setInterval(tick,30);
-  ['touchstart','mousedown','mouseenter','pointerdown'].forEach(function(ev){st.addEventListener(ev,function(){paused=true;},{passive:true});});
-  ['touchend','mouseup','mouseleave','pointerup'].forEach(function(ev){st.addEventListener(ev,function(){setTimeout(function(){paused=false;},1500);},{passive:true});});
+  setInterval(function(){ if(!document.hidden) step(); },35);
+  st.addEventListener('scroll',function(){ pos=st.scrollLeft; },{passive:true});
 })();
 </script>
 </main>
