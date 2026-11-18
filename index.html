@@ -341,9 +341,12 @@ label{margin-bottom:4px;font-size:12px}
 @media(max-width:900px){.more-svc{grid-template-columns:1fr}}
 
 .areas-wrap{position:relative}
-.area-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-.area-chips a{display:inline-block;padding:9px 16px;border:1px solid #cfd8d2;border-radius:999px;background:#F2F4EF;color:#12372A;font-weight:600;font-size:15px;text-decoration:none}
-.area-chips a:hover{border-color:#B08D57;color:#B08D57}
+.area-mini{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.area-mini a.card{display:block;text-decoration:none;color:#12372A;border-radius:12px;overflow:hidden;background:#fff;border:1px solid #e3e8e4}
+.area-mini a.card:hover{border-color:#B08D57}
+.area-mini .media{display:block;width:100%;aspect-ratio:4/3;height:auto;object-fit:cover}
+.area-mini .area-name{display:block;padding:8px 10px;font-weight:700;font-size:14px;line-height:1.2}
+@media(max-width:900px){.area-mini{grid-template-columns:repeat(3,1fr);gap:8px}.area-mini .area-name{font-size:13px;padding:7px 8px}}
 .swipe-hint{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-top:8px;font-family:BSC;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:13px;color:#8a6a35}
 .swipe-hint svg{animation:nudge 1.4s ease-in-out infinite}
 @keyframes nudge{50%{transform:translateX(6px)}}
@@ -430,12 +433,12 @@ label{margin-bottom:4px;font-size:12px}
   <div class="wrap">
     <h2>Areas we serve</h2>
     <p class="section-intro">Security guards and event security across Virginia.</p>
-    <div class="area-chips">
-      <a href="security-guards-northern-virginia.html">Northern Virginia</a>
-      <a href="security-guards-virginia-beach.html">Virginia Beach</a>
-      <a href="security-guards-shenandoah-valley.html">Shenandoah Valley</a>
-      <a href="security-guards-richmond.html">Richmond</a>
-      <a href="security-guards-fredericksburg.html">Fredericksburg</a>
+    <div class="area-mini">
+      <a class="card" href="security-guards-northern-virginia.html"><img class="media" src="https://images.unsplash.com/photo-1654803291865-a92b7b496bb3?auto=format&fit=crop&w=800&q=70" srcset="https://images.unsplash.com/photo-1654803291865-a92b7b496bb3?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1654803291865-a92b7b496bb3?auto=format&fit=crop&w=600&q=70 600w, https://images.unsplash.com/photo-1654803291865-a92b7b496bb3?auto=format&fit=crop&w=800&q=70 800w" sizes="(max-width: 900px) 30vw, 200px" alt="Northern Virginia" loading="lazy" decoding="async"><span class="area-name">Northern Virginia</span></a>
+      <a class="card" href="security-guards-virginia-beach.html"><img class="media" src="https://images.unsplash.com/photo-1695609768244-399cface4b17?auto=format&fit=crop&w=800&q=70" srcset="https://images.unsplash.com/photo-1695609768244-399cface4b17?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1695609768244-399cface4b17?auto=format&fit=crop&w=600&q=70 600w, https://images.unsplash.com/photo-1695609768244-399cface4b17?auto=format&fit=crop&w=800&q=70 800w" sizes="(max-width: 900px) 30vw, 200px" alt="Virginia Beach" loading="lazy" decoding="async"><span class="area-name">Virginia Beach</span></a>
+      <a class="card" href="security-guards-shenandoah-valley.html"><img class="media" src="https://images.unsplash.com/photo-1780496603748-d4153c8b58b0?auto=format&fit=crop&w=800&q=70" srcset="https://images.unsplash.com/photo-1780496603748-d4153c8b58b0?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1780496603748-d4153c8b58b0?auto=format&fit=crop&w=600&q=70 600w, https://images.unsplash.com/photo-1780496603748-d4153c8b58b0?auto=format&fit=crop&w=800&q=70 800w" sizes="(max-width: 900px) 30vw, 200px" alt="Shenandoah Valley" loading="lazy" decoding="async"><span class="area-name">Shenandoah Valley</span></a>
+      <a class="card" href="security-guards-richmond.html"><img class="media" src="https://images.unsplash.com/photo-1583586604855-62f0cec351d9?auto=format&fit=crop&w=800&q=70" srcset="https://images.unsplash.com/photo-1583586604855-62f0cec351d9?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1583586604855-62f0cec351d9?auto=format&fit=crop&w=600&q=70 600w, https://images.unsplash.com/photo-1583586604855-62f0cec351d9?auto=format&fit=crop&w=800&q=70 800w" sizes="(max-width: 900px) 30vw, 200px" alt="Richmond" loading="lazy" decoding="async"><span class="area-name">Richmond</span></a>
+      <a class="card" href="security-guards-fredericksburg.html"><img class="media" src="https://images.unsplash.com/photo-1704291636047-0991d88be93b?auto=format&fit=crop&w=800&q=70" srcset="https://images.unsplash.com/photo-1704291636047-0991d88be93b?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1704291636047-0991d88be93b?auto=format&fit=crop&w=600&q=70 600w, https://images.unsplash.com/photo-1704291636047-0991d88be93b?auto=format&fit=crop&w=800&q=70 800w" sizes="(max-width: 900px) 30vw, 200px" alt="Fredericksburg" loading="lazy" decoding="async"><span class="area-name">Fredericksburg</span></a>
     </div>
   </div>
 </section>
