@@ -322,8 +322,8 @@ label{margin-bottom:4px;font-size:12px}
 }
 
 /* swipe strip for areas (phone + desktop) */
-.areas.swipe{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:10px;-webkit-overflow-scrolling:touch}
-.areas.swipe .card{flex:0 0 260px;scroll-snap-align:start}
+.areas.swipe{display:flex;overflow-x:auto;gap:12px;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+.areas.swipe .card{flex:0 0 260px;}
 .areas.swipe::-webkit-scrollbar{height:6px}.areas.swipe::-webkit-scrollbar-thumb{background:#cfd8d2;border-radius:6px}
 @media(max-width:900px){.areas.swipe{grid-template-columns:none!important}.areas.swipe .card{flex:0 0 200px}}
 /* smaller remote surveillance box */
@@ -516,16 +516,18 @@ label{margin-bottom:4px;font-size:12px}
 <script>
 (function(){
   var st=document.getElementById('areaStrip'); if(!st) return;
-  var dir=1, pos=0;
+  var pos=0, dir=1, wait=0;
   function step(){
+    if(document.hidden) return;
     var max=st.scrollWidth-st.clientWidth;
     if(max<=0) return;
-    pos+=dir;
-    if(pos>=max){pos=max;dir=-1;}
-    if(pos<=0){pos=0;dir=1;}
+    if(wait>0){ wait--; return; }
+    pos+=dir*0.5;
+    if(pos>=max){ pos=max; dir=-1; wait=50; }
+    if(pos<=0){ pos=0; dir=1; wait=50; }
     st.scrollLeft=pos;
   }
-  setInterval(function(){ if(!document.hidden) step(); },35);
+  setInterval(step,40);
   st.addEventListener('scroll',function(){ pos=st.scrollLeft; },{passive:true});
 })();
 </script>
