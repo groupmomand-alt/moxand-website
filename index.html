@@ -320,6 +320,25 @@ label{margin-bottom:4px;font-size:12px}
  .svc-mini{padding:12px}
  .hero h1{font-size:30px}
 }
+
+/* swipe strip for areas (phone + desktop) */
+.areas.swipe{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+.areas.swipe .card{flex:0 0 260px;scroll-snap-align:start}
+.areas.swipe::-webkit-scrollbar{height:6px}.areas.swipe::-webkit-scrollbar-thumb{background:#cfd8d2;border-radius:6px}
+@media(max-width:900px){.areas.swipe{grid-template-columns:none!important}.areas.swipe .card{flex:0 0 200px}}
+/* smaller remote surveillance box */
+.monitor-box .split{grid-template-columns:1fr 200px;padding:22px 26px;gap:22px;border-radius:20px}
+.monitor-box h2{font-size:22px;margin-bottom:4px}
+.monitor-box .section-intro{font-size:14px;margin-bottom:10px}
+.monitor-box .btn{padding:10px 16px;font-size:13px}
+.monitor-box .media{max-height:120px;aspect-ratio:4/3}
+.monitor-box .box-icon{width:44px;height:44px;padding:6px}
+@media(max-width:900px){.monitor-box .split{grid-template-columns:1fr;padding:18px}.monitor-box .media{max-height:110px}}
+/* more services */
+.more-svc{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:760px}
+.more-svc a{background:#fff;border-radius:16px;padding:18px 20px;text-decoration:none;color:var(--deep);box-shadow:0 1px 0 var(--line),0 8px 24px rgba(18,55,42,.07);font-family:BSC;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.more-svc a span{display:block;font-family:B;text-transform:none;font-weight:400;color:var(--muted);font-size:14px;margin-top:4px;letter-spacing:0}
+@media(max-width:900px){.more-svc{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "MOXAND Security Services", "legalName": "M Secura LLC", "url": "https://moxand.com", "logo": "https://moxand.com/assets/img/icon-512.png", "image": "https://moxand.com/assets/img/og-image.jpg", "telephone": "+1-571-596-7770", "email": "info@moxand.com", "address": {"@type": "PostalAddress", "streetAddress": "8300 Boone Blvd, Suite 500", "addressLocality": "Vienna", "addressRegion": "VA", "postalCode": "22182", "addressCountry": "US"}, "areaServed": [{"@type": "State", "name": "Virginia"}, {"@type": "Place", "name": "Northern Virginia"}, {"@type": "City", "name": "Virginia Beach"}, {"@type": "Place", "name": "Shenandoah Valley"}, {"@type": "City", "name": "Richmond"}, {"@type": "City", "name": "Fredericksburg"}], "description": "Unarmed security guard services, event security, mobile patrol, fire watch, remote video surveillance, and virtual guards.", "identifier": {"@type": "PropertyValue", "propertyID": "Virginia DCJS Private Security Services Business License", "value": "11-30334"}, "knowsAbout": ["Unarmed security guards", "Event security", "Mobile patrol", "Fire watch", "Construction site security", "Remote video surveillance", "Virtual guards"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Security services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Security guard services"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Event security"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mobile patrol"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fire watch"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Remote video surveillance"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Virtual guard services"}}]}}</script>
 </head>
@@ -392,9 +411,18 @@ label{margin-bottom:4px;font-size:12px}
 
 <section>
   <div class="wrap">
+    <h2>More services</h2>
+    <div class="more-svc">
+      <a href="loss-prevention.html">Loss prevention<span>Retail stores: theft watch and patrols</span></a>
+      <a href="parking-control.html">Parking control<span>Lots and garages: rules, traffic and fire lanes</span></a>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
     <h2>Areas we serve</h2>
     <p class="section-intro">Security guards and event security across Virginia.</p>
-    <div class="grid3 areas">
+    <div class="grid3 areas swipe">
       <article class="card"><img class="media " src="https://images.unsplash.com/photo-1654803291865-a92b7b496bb3?auto=format&fit=crop&w=800&q=70" srcset="https://images.unsplash.com/photo-1654803291865-a92b7b496bb3?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1654803291865-a92b7b496bb3?auto=format&fit=crop&w=600&q=70 600w, https://images.unsplash.com/photo-1654803291865-a92b7b496bb3?auto=format&fit=crop&w=800&q=70 800w" sizes="(max-width: 900px) 46vw, 230px" alt="Northern Virginia" loading="lazy" decoding="async"><div class="card-body"><h3>Northern Virginia</h3><p>Fairfax, Arlington, Alexandria, Loudoun, and Prince William. <a class="more" href="security-guards-northern-virginia.html">See Northern Virginia</a></p></div></article>
       <article class="card"><img class="media " src="https://images.unsplash.com/photo-1695609768244-399cface4b17?auto=format&fit=crop&w=800&q=70" srcset="https://images.unsplash.com/photo-1695609768244-399cface4b17?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1695609768244-399cface4b17?auto=format&fit=crop&w=600&q=70 600w, https://images.unsplash.com/photo-1695609768244-399cface4b17?auto=format&fit=crop&w=800&q=70 800w" sizes="(max-width: 900px) 46vw, 230px" alt="Virginia Beach" loading="lazy" decoding="async"><div class="card-body"><h3>Virginia Beach</h3><p>Virginia Beach, Norfolk, Chesapeake, and Hampton Roads. <a class="more" href="security-guards-virginia-beach.html">See Virginia Beach</a></p></div></article>
       <article class="card"><img class="media " src="https://images.unsplash.com/photo-1780496603748-d4153c8b58b0?auto=format&fit=crop&w=800&q=70" srcset="https://images.unsplash.com/photo-1780496603748-d4153c8b58b0?auto=format&fit=crop&w=400&q=70 400w, https://images.unsplash.com/photo-1780496603748-d4153c8b58b0?auto=format&fit=crop&w=600&q=70 600w, https://images.unsplash.com/photo-1780496603748-d4153c8b58b0?auto=format&fit=crop&w=800&q=70 800w" sizes="(max-width: 900px) 46vw, 230px" alt="Shenandoah Valley" loading="lazy" decoding="async"><div class="card-body"><h3>Shenandoah Valley</h3><p>Winchester, Harrisonburg, Staunton, and the valley. <a class="more" href="security-guards-shenandoah-valley.html">See Shenandoah Valley</a></p></div></article>
