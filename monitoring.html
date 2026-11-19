@@ -426,6 +426,27 @@ label{margin-bottom:4px;font-size:12px}
     </div>
   </div>
 </section>
+<section class="mist">
+  <div class="wrap">
+    <h2>Get a quote for remote surveillance</h2>
+    <p class="section-intro">Only name, phone, and ZIP are required. We reply the same day.</p>
+    <form class="quote form-card" id="mon-form" novalidate>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="row2">
+        <div class="field"><label for="mon-name">Name <span class="req">*</span></label><input type="text" id="mon-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="mon-phone">Phone <span class="req">*</span></label><input type="tel" id="mon-phone" name="phone" autocomplete="tel" required></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="mon-zip">ZIP code <span class="req">*</span></label><input type="text" id="mon-zip" name="zip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="postal-code" required></div>
+        <div class="field"><label for="mon-email">Email <span class="opt">(optional)</span></label><input type="email" id="mon-email" name="email" autocomplete="email"></div>
+      </div>
+      <div class="field"><label for="mon-msg">Message <span class="opt">(optional)</span></label><textarea id="mon-msg" name="message" placeholder="Tell us about your site"></textarea></div>
+      <button class="btn" type="submit">Request My Quote</button>
+      <div class="form-msg" id="mon-ok" role="status"><strong>Thank you. We got your request.</strong><p style="margin:6px 0 0">We will reply the same day. Urgent? Call <a href="tel:+15715967770">(571) 596-7770</a>.</p></div>
+      <div class="form-msg error" id="mon-err" role="alert"><strong>Sorry, it did not send.</strong><p style="margin:6px 0 0">Please call <a href="tel:+15715967770">(571) 596-7770</a> or email <a href="mailto:info@moxand.com">info@moxand.com</a>.</p></div>
+    </form>
+  </div>
+</section>
 <section class="cta-band">
   <svg class="wmk" viewBox="96 70 620 807" aria-hidden="true"><path fill="#fff" fill-rule="evenodd" d="M406,70 L716,190 V490 C716,700 560,810 406,877 C252,810 96,700 96,490 V190 Z M406,106 L688,214 V490 C688,682 540,782 406,842 C272,782 124,682 124,490 V214 Z"/><path fill="#fff" d="M279,314 L406,425 L533,314 L547,366 L406,489 L265,366 Z M256,401 L406,530 L556,401 L570,453 L406,592 L283,488 L270,540 L218,540 Z M580,487 L595,540 L519,540 Z"/></svg>
   <div class="wrap">
@@ -439,6 +460,25 @@ label{margin-bottom:4px;font-size:12px}
     </div>
   </div>
 </section>
+<script>
+(function(){
+  var f=document.getElementById('mon-form');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=document.getElementById('mon-ok'), err=document.getElementById('mon-err'), b=f.querySelector('button[type=submit]'), t=b.textContent;
+    ok.classList.remove('show'); err.classList.remove('show');
+    if(!f.checkValidity()){f.reportValidity();return;}
+    var data={}; new FormData(f).forEach(function(v,k){ if(v==='')return; data[k]=data[k]?data[k]+', '+v:v; });
+    data._subject='New remote surveillance request - MOXAND'; data._template='table';
+    b.disabled=true; b.textContent='Sending...';
+    fetch('https://formsubmit.co/ajax/info@moxand.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){if(!r.ok)throw 0;return r.json();})
+      .then(function(){f.reset();ok.classList.add('show');if(window.gtag)gtag('event','generate_lead',{form:'New remote surveillance request - MOXAND'});})
+      .catch(function(){err.classList.add('show');})
+      .finally(function(){b.disabled=false;b.textContent=t;});
+  });
+})();
+</script>
 </main>
 <footer class="site">
   <div class="footer-grid">
